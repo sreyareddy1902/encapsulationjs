@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*----getters method----access
+        let person={
+            firstName:'John',
+            lastName:'Doe',
+
+            get fullName()
+            {
+                return `${person.firstName} ${person.lastName}` ;
+            }
+        }
+
+        console.log(person.fullName)
+        -----*/
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        /*----setters method---assign
+        let person={
+            firstName:'John',
+            lastName:'Doe',
+
+            set fullName(value)
+            {
+                let p1=value.split(" ")
+                this.firstName=p1[0]
+                this.lastName=p1[1]
+            }
+        }
+        
+        person.fullName="hari krishna"
+        console.log(person.firstName)
+        console.log(person.lastName)
+        ------*/
+
+
+        
+
+
+
+
+
+
+
+        /*---getters and setters using classes
+        class circle
+        {
+            constructor(radius)
+            {
+                this.radius=radius
+            }
+
+            get diameter()
+            {
+                return this.radius*2
+            }
+            set diameter(value)
+            {
+                this.radius=value/2
+            }
+             get area()
+             {
+                return Math.PI*this.radius **2
+             }
+        }
+
+        let c1=new circle(5)
+       console.log(c1.diameter)
+       c1.diameter=6
+       console.log(c1.area)
+        ------*/
+
+
+
+
+
+
+        /*----encapsulation using getters and setters method
+        class clock
+        {
+            constructor()
+            {
+                let hr
+                let mins
+                let secs
+            }
+            getHr()
+            {
+                return this.hr
+            }
+            setHr(hr)
+            {
+                if(hr>=1 && hr<=12)
+                {
+                    this.hr=hr
+                }
+            }
+            getMins()
+            {
+                return this.mins
+            }
+            setMins(mins)
+            {
+                if(mins>=1 && mins<=60)
+                {
+                    this.mins=mins
+                }
+            }
+            getsecs()
+            {
+                return this.secs
+            }
+            setSecs(secs)
+            {
+                if(secs>=1 && secs<=60)
+                {
+                    this.secs=secs
+                }
+            }
+            clock(hr,mins,secs)
+            {
+                if(hr>=1 && hr<=12)
+                {
+                    this.hr=hr
+                }
+                if(mins>=1 && mins<=60)
+                {
+                    this.mins=mins
+                }
+                if(secs>=1 && secs<=60)
+                {
+                    this.secs=secs
+                }
+            }
+            clock()
+            {
+
+            }
+            showTime()
+            {
+                console.log(`${this.hr}:${this.mins}:${this.secs}`)
+            }
+            
+        }
+
+        let c1=new clock()
+        c1.setHr(1)
+        c1.setMins(59)
+        c1.setSecs(30)
+        //c1.showTime()
+        console.log(c1.getHr()+":"+c1.getMins()+":"+c1.getsecs())
+        -----*/
+
+        
+        const user = 
+        { 
+	        pwd: "", 
+	        get password() 
+            { 
+		        return this.pwd; 
+	        }, 
+	        set password(value) 
+            { 
+		        this.pwd = this.encrypt(value); 
+	        }, 
+	        encrypt(value) 
+            { 		
+		        return value.split("").reverse().join(""); 
+	        }, 
+	        decrypt(value) { 
+		        return value.split("").reverse().join(""); 
+	        }, 
+        }; 
+
+        console.log(user.password); 
+        user.password = "password@123"; 
+        console.log(user.password); 
+        console.log(user.decrypt(user.password)); 
+
+
+    </script>
+</body>
+</html>

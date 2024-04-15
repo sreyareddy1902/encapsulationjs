@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*---private scope
+        let Employee=(function(){
+
+            let empName='' //private variable
+
+            return class{
+                constructor(name)
+                {
+                    empName=name
+                    //console.log(this.name)
+                }
+                getPrivateName()
+                {
+                return empName;
+                }
+            }
+            
+        })();
+
+        let e1=new Employee('ram')
+        console.log(e1.getPrivateName()) //we can access this
+
+        //console.log(e1.empName) //we cannot access private variable i.e undefined
+        ------*/
+
+
+
+
+
+
+
+
+
+
+        /*-----public scope
+        let empName='ram'
+        class Employee{
+            constructor(){
+                this.getName=function()
+                {
+                    return empName
+                }
+            }
+        }
+
+        let e1=new Employee()
+        console.log(e1.getName())
+        --------*/
+
+
+        /*---protected scope       
+        let protectedMap = new WeakMap();
+
+        class Person {
+        	constructor(name) {
+            
+            
+        		protectedMap.set(this, {
+        			name
+        		});
+        	}
+        
+        	// Protected method
+        	getName() {
+            
+        		// Access property via WeakMap
+        		return protectedMap.get(this).name;
+        	}
+        }
+
+
+        class Employee extends Person {
+        	constructor(name, title) {
+        		super(name);
+            
+            
+        		protectedMap.get(this).title = title;
+        	}
+        
+        	getTitle() {
+        		return protectedMap.get(this).title;
+        	}
+        }
+
+        let e1 = new Employee('Aryan', 'Manager');
+
+        console.log(e1.getName());
+        console.log(e1.getTitle());
+
+        ----*/
+
+
+
+
+
+    </script>
+</body>
+</html>

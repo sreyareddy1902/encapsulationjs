@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*---encapsulation using closures
+        function BankAcoount(accountNumber,accountHolderName,balance)
+        {
+            let acno=accountNumber
+            let acname=accountHolderName
+            let bal=balance
+
+            function showAccountDetails()
+            {
+                console.log(`AccountNumber:${acno}`)
+                console.log(`AccountHolderName:${acname}`)
+                console.log(`Balance:${bal}`)
+            }
+
+            function deposit(amount)
+            {
+                bal=bal+amount
+                showAccountDetails()
+            }
+
+            function withdraw(amount)
+            {
+                if(bal>=amount)
+                {
+                    bal=bal-amount
+                    showAccountDetails()
+                }
+                else
+                {
+                    showAccountDetails()
+                    console.log("Insuffient balance")
+                }
+            }
+
+            return{
+                showAccountDetails:showAccountDetails,
+                deposit:deposit,
+                withdraw:withdraw
+            }
+
+        }
+
+        let p1=new BankAcoount('98723','Ram',1000)
+        p1.showAccountDetails()
+        console.log('*********************************************')
+        p1.deposit(2000)
+        console.log('*********************')
+        p1.withdraw(1000)
+        console.log('****************************')
+        p1.withdraw(4000)
+        ------------------*/
+
+       
+        /*----encapsulation using classes
+        class BankAccount
+        {
+            constructor(accountNumber,accountHolderName,balance)
+            {
+                this.acno=accountNumber
+                this.acname=accountHolderName
+                this.bal=balance
+            }
+            showAccountDetails()
+            {
+                console.log(`AccountNumber:${this.acno}`)
+                console.log(`AccountHolderName:${this.acname}`)
+                console.log(`Balance:${this.bal}`)
+            }
+            deposit(amount)
+            {
+                this.bal=this.bal+amount
+                this.showAccountDetails()
+            }
+            withdraw(amount)
+            {
+                if(this.bal>=amount)
+                {
+                    this.bal=this.bal-amount
+                    this.showAccountDetails()
+                }
+                else
+                {
+                    this.showAccountDetails()
+                    console.log("Insuffient balance")
+                }
+            }
+        }
+
+        let p1=new BankAccount('123456','john',2000)
+        p1.showAccountDetails()
+        console.log('*************************')
+        p1.deposit(1000)
+        console.log('*********************')
+        p1.withdraw(20000)
+        console.log('*********************')
+        p1.withdraw(500)
+        -------*/
+
+       
+    </script>
+</body>
+</html>
